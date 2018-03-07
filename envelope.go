@@ -140,8 +140,9 @@ type Members struct {
 }
 
 type Member struct {
-	XMLName xml.Name `xml:"member"`
-	User    User     `xml:"user"`
+	XMLName  xml.Name `xml:"member"`
+	User     User     `xml:"user"`
+	Facility Facility `xml:"facility"`
 }
 
 type User struct {
@@ -158,6 +159,12 @@ type User struct {
 	Phone       string   `xml:"phone,attr,omitempty"`
 	Description string   `xml:"description,attr,omitempty"`
 	Title       string   `xml:"title,attr,omitempty"`
+}
+
+type Facility struct {
+	XMLName xml.Name `xml:"facility,omitempty`
+	Id      int      `xml:"id,attr,omitempty"`
+	Name    string   `xml:"name,attr,omitempty"`
 }
 
 type When struct {
