@@ -104,6 +104,7 @@ type ScheduleEvent struct {
 	Members     Members    `xml:"members"`
 	RepeatInfo  RepeatInfo `xml:"repeat_info"`
 	When        When       `xml:"when"`
+	Timezone    string     `xml:"timezone,attr"`
 	Detail      string     `xml:"detail,attr"`
 	Description string     `xml:"description,attr"`
 	Id          int        `xml:"id,attr"`
